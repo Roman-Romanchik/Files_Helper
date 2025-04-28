@@ -18,10 +18,13 @@ public class App extends Application {
     @Override
     public void start(Stage stage) {
         stage.setTitle("Files Helper");
-		
+		openWindow("/main_View.fxml", stage);
+    }
+	
+	public void openWindow(String resourcePath, Stage stage) {
 		Parent root;
 		try{
-			root = FXMLLoader.load(getClass().getResource("/main_View.fxml"));
+			root = FXMLLoader.load(getClass().getResource(resourcePath));
 			Scene scene = new Scene(root);
         
 			stage.setScene(scene);
@@ -29,6 +32,5 @@ public class App extends Application {
 		} catch (IOException ex) {
 			Logger.getLogger(App.class.getName()).log(Level.SEVERE, null, ex);
 		}
-		     
-    }
+	}
 }
