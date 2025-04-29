@@ -1,12 +1,8 @@
 package com.example.Files.Helper;
 
 import javafx.stage.Stage;
-import javafx.scene.layout.GridPane;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.ColumnConstraints;
-import javafx.scene.layout.RowConstraints;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -22,7 +18,7 @@ public class CreateFolders {
 	LocalDate startDate;
 	LocalDate endDate;
 	Label directoryForFolders;
-	public void openCreateFoldersMenu() {
+	public void openCreateFoldersMenu(Stage foldersMenuStage) {
 		directoryForFolders = new Label("C:\\");
 		Button browsDirectory = new Button("Brows");
 		Button createFolders = new Button("Create");
@@ -35,7 +31,7 @@ public class CreateFolders {
 		
 		DirectoryChooser directoryChooser = new DirectoryChooser();
 		
-		Stage foldersMenuStage = new Stage();
+		
 		
 		browsDirectory.setOnAction(event -> {
 			selectedPaths = directoryChooser.showDialog(foldersMenuStage);
@@ -60,37 +56,6 @@ public class CreateFolders {
 			}
 			foldersMenuStage.close();
 		});
-		
-		
-		GridPane root = new GridPane();
-		
-		ColumnConstraints firstColumn = new ColumnConstraints(200, 200, Double.MAX_VALUE);
-		ColumnConstraints secondColumn = new ColumnConstraints(200, 200, Double.MAX_VALUE);
-		
-		RowConstraints firstRow = new RowConstraints(50);
-		RowConstraints secondRow = new RowConstraints(50);
-		RowConstraints thirdRow = new RowConstraints(50);
-		
-		root.getColumnConstraints().add(firstColumn);
-		root.getColumnConstraints().add(secondColumn);
-		
-		root.getRowConstraints().add(firstRow);
-		root.getRowConstraints().add(secondRow);
-		root.getRowConstraints().add(thirdRow);
-		
-		root.add(directoryForFolders, 0, 0);
-		root.add(browsDirectory, 1, 0);
-		root.add(chooseStartOfDayPeriod, 0, 2);
-		root.add(chooseEndOfDayPeriod, 1, 2);
-		root.add(createFolders, 3, 3);
-		
-		Scene scene = new Scene(root);
-		
-		
-		
-		foldersMenuStage.setScene(scene);
-		
-		foldersMenuStage.show();
 	}
 	
 	private String createFolderName(int day) {
