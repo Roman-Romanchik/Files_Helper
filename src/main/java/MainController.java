@@ -44,4 +44,44 @@ public class MainController {
 	public void profileMenu(ActionEvent event) {
 		app.openWindow("/Profile_View.fxml", new Stage());
 	}
+	
+	@FXML
+	public void dayRecordsMenu(ActionEvent event) {
+		app.openWindow("/dayRecordsView.fxml", new Stage());
+	}
+	
+	@FXML
+	public void cardDayMenu(ActionEvent event) {
+		app.openWindow("/cardDay.fxml", new Stage());
+	}
+	
+	@FXML
+	public void MSABGMenu(ActionEvent event) {
+		app.openWindow("/MSABG.fxml", new Stage());
+	}
+	
+	@FXML
+	public void grapghMenu(ActionEvent event) {
+		app.openWindow("/graphsView.fxml", new Stage());
+	}
+	
+	@FXML
+	public void materialsMenu(ActionEvent event) {
+		app.openWindow("/materialsView.fxml", new Stage());
+	}
+	
+	@FXML
+	public void libraryMenu(ActionEvent event) {
+		app.openWindow("/libraryView.fxml", new Stage());
+	}
+	
+	@FXML
+	public void purposesMenu(ActionEvent event) {
+		app.openWindow("/purposesView.fxml", new Stage());
+	}
+	
+//	@FXML
+//	public void settingsMenu(ActionEvent event) {
+//		app.openWindow("/Profile_View.fxml", new Stage());
+//	}
 }
