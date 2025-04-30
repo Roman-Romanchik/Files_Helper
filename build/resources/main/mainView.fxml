@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<SplitPane fx:id="root" dividerPositions="0.25" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+<SplitPane fx:id="root" dividerPositions="0.25" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.Files.Helper.MainController">
     <items>
         <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="150.0">
          <children>
